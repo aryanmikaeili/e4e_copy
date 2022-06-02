@@ -5,9 +5,9 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from stylegan2.op.fused_act import FusedLeakyReLU, fused_leaky_relu
-from stylegan2.op.upfirdn2d import upfirdn2d
-from stylegan2.op import conv2d_gradfix
+from models.stylegan2.op.fused_act import FusedLeakyReLU, fused_leaky_relu
+from models.stylegan2.op.upfirdn2d import upfirdn2d
+from models.stylegan2.op import conv2d_gradfix
 
 
 
@@ -747,5 +747,4 @@ class Discriminator(nn.Module):
         out = self.final_linear(out)
 
         return out
-
 
